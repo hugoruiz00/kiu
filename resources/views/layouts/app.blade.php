@@ -32,6 +32,15 @@
             <main>
                 {{ $slot }}
             </main>
+            
         </div>
+        <footer class="text-gray-600 text-sm py-1 text-center w-full fixed bottom-0">
+            <a target="_" href="{{route('privacy_policy')}}" class="mr-3 underline">
+                Política de privacidad
+            </a>
+            <a target="_" href="{{route('terms_service')}}" class="underline">
+                Términos del servicio
+            </a>
+        </footer>
     </body>
 </html>

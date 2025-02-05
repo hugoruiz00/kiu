@@ -8,10 +8,21 @@
         <div class="flex flex-col items-center text-center">
             <h1 class="my-4 text-4xl font-bold text-[#FF5C00]">Administra la cola en tu negocio de forma fácil</h1>
             <div>
-                <a href="{{route('loginprovider', 'google')}}" class="h-14 my-5 font-bold shadow-lg shadow-[#8b8b8b] inline-flex items-center px-4 py-2 bg-[#FFFFFF] border border-transparent rounded-md text-xs text--[#616161] uppercase tracking-widest hover:bg-[#dfdfdf] active:bg-[#dfdfdf] focus:outline-none ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
+                <a href="{{route('loginprovider', 'google')}}" class="h-14 mt-5 font-bold shadow-lg shadow-[#8b8b8b] inline-flex items-center px-4 py-2 bg-[#FFFFFF] border border-transparent rounded-md text-xs text--[#616161] uppercase tracking-widest hover:bg-[#dfdfdf] active:bg-[#dfdfdf] focus:outline-none ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
                     <x-icons.google-logo width="25"/>
                     <span class='ml-3'>Ingresa con tu cuenta de Google</span>
                 </a>
+                <p class="text-xs mt-4 mb-4 text-gray-600">
+                    Al ingresar, aceptas los
+                    <a target="_" href="{{route('terms_service')}}" class="underline">
+                        Términos del servicio
+                    </a>
+                    y confirmas que has leído la
+                    <a target="_" href="{{route('privacy_policy')}}" class="underline">
+                        Política de privacidad
+                    </a>
+                    .
+                </p>
             </div>
             <p class="my-4 text-2xl text-[#5F5F5F]">
                 Permite a tus clientes colocarse en la cola virtual <br/> desde <span class="font-bold">cualquier lugar</span> y <span class="font-bold"> de forma rápida</span>

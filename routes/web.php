@@ -10,6 +10,9 @@ use App\Http\Middleware\EnsureIsBusinessOwner;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BusinessController::class, 'index'])->name('home');
+Route::get('/privacy-policy', function(){ return view('terms_and_policy.privacy_policy'); })->name('privacy_policy');
+Route::get('/terms-service', function(){ return view('terms_and_policy.terms_service'); })->name('terms_service');
+
 Route::get('/business/{business}/welcome', [BusinessQueueController::class, 'public_active_clients'])->name('business.public_active_clients');
 Route::post('/business/{business}/public-add-queue-entry', [BusinessQueueController::class, 'public_add_queue_entry'])->name('business.public_add_queue_entry');
 
@@ -24,9 +27,9 @@ Route::post('/comment', [CommentController::class, 'store'])->name('comment.stor
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Business Owner
     Route::get('/business', [BusinessController::class, 'edit'])->name('business.edit');
