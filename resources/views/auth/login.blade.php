@@ -14,11 +14,11 @@
                 </a>
                 <p class="text-xs mt-4 mb-4 text-gray-600">
                     Al ingresar, aceptas los
-                    <a target="_" href="{{route('terms_service')}}" class="underline">
+                    <a target="_blank" href="{{route('terms_service')}}" class="underline">
                         Términos del servicio
                     </a>
                     y confirmas que has leído la
-                    <a target="_" href="{{route('privacy_policy')}}" class="underline">
+                    <a target="_blank" href="{{route('privacy_policy')}}" class="underline">
                         Política de privacidad
                     </a>
                     .
