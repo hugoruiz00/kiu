@@ -18,18 +18,14 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->createMany([
             [
-                'name' => 'Hugo',
-                'email' => 'hugo.ruiz.pz@gmail.com',
-            ],
-            [
                 'name' => 'Test',
-                'email' => 'ruiz@gmail.com',
+                'email' => 'test@gmail.com',
             ]
         ]);
 
         BusinessCategory::insert([
-            ["name" => "Barbería"],
-            ["name" => "Salón de belleza"],
+            ["name" => "Barber"],
+            ["name" => "Salon"],
         ]);
     }
 }
